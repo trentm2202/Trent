@@ -1,3 +1,11 @@
+// Define an array of possible responses
+const chatbotResponses = [
+  "How can I assist you today?",
+  "Ask me anything!",
+  "I'm here to help. What's on your mind?",
+  "Hello there! What can I do for you?",
+];
+
 // Function to add a user message to the chat log
 function addUserMessage(message) {
   const chatLog = document.getElementById("chat-log");
@@ -7,12 +15,16 @@ function addUserMessage(message) {
   chatLog.appendChild(userMessage);
 }
 
-// Function to add a chatbot message to the chat log
-function addChatbotMessage(message) {
+// Function to add a chatbot message to the chat log with a random response
+function addChatbotMessage() {
   const chatLog = document.getElementById("chat-log");
   const chatbotMessage = document.createElement("div");
   chatbotMessage.className = "chatbot-message";
-  chatbotMessage.textContent = "Chatbot: " + message;
+
+  // Select a random response from the array
+  const randomResponse = chatbotResponses[Math.floor(Math.random() * chatbotResponses.length)];
+
+  chatbotMessage.textContent = "Joe: " + randomResponse; // Use "Joe" as the chatbot's name
   chatLog.appendChild(chatbotMessage);
 }
 
@@ -23,11 +35,8 @@ function handleUserInput() {
 
   if (message !== "") {
     addUserMessage(message);
-    // You can add your chatbot's response logic here
-    // For now, let's just provide a simple example
-    setTimeout(() => {
-      addChatbotMessage("Hello! I'm your chatbot. How can I assist you?");
-    }, 1000);
+    // Call the addChatbotMessage function to get a random response from Joe
+    addChatbotMessage();
 
     userInput.value = "";
   }
@@ -39,9 +48,8 @@ sendButton.addEventListener("click", handleUserInput);
 
 // Event listener for the Enter key in the input field
 const userInput = document.getElementById("user-input");
-userInput.addEventListener("keyup", function(event) {
+userInput.addEventListener("keyup", function (event) {
   if (event.key === "Enter") {
     handleUserInput();
   }
 });
-
