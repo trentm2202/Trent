@@ -113,3 +113,38 @@ h1 {
   text-align: center; /* Center-align the text */
   margin-top: 20px; /* Add some top margin for spacing */
 }
+/* Your existing styles for chatbot-related elements are here */
+
+/* Center align all content */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* This ensures full-height content */
+    margin: 0; /* Remove default body margin */
+}
+
+/* Style for the title */
+h1 {
+    font-weight: bold; /* Make the text bold */
+    text-align: center; /* Center-align the text */
+    margin-top: 20px; /* Add some top margin for spacing */
+}
+
+/* Style for buttons or activities */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #0073e6;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+/* Style for buttons on hover */
+button:hover {
+    background-color: #0056b3;
+}
