@@ -53,3 +53,14 @@ userInput.addEventListener("keyup", function (event) {
     handleUserInput();
   }
 });
+// Event listener for the chatbot button
+const chatbotButton = document.getElementById("chatbot-button");
+chatbotButton.addEventListener("click", () => {
+    window.location.href = "chatbot.html"; // Change to the appropriate URL
+});
+
+// Event listener for the Snake game button
+const snakeGameButton = document.getElementById("snake-game-button");
+snakeGameButton.addEventListener("click", () => {
+    window.location.href = "snake-game.html"; // Change to the appropriate URL
+});
