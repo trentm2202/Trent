@@ -64,3 +64,11 @@ const snakeGameButton = document.getElementById("snake-game-button");
 snakeGameButton.addEventListener("click", () => {
     window.location.href = "snake-game.html"; // Change to the appropriate URL
 });
+// Event listener for the "Chat with Joe" button
+const chatbotButton = document.getElementById("chatbot-button");
+chatbotButton.addEventListener("click", () => {
+    // Redirect to the chatbot page
+    window.location.href = "chatbot.html";
+});
+
+// JavaScript code for the chatbot can be placed here
