@@ -48,3 +48,7 @@
   background-color: #0056b3;
 }
 
+/* Background color for the entire page */
+body {
+  background-color: #6495ED; /* Light navy blue */
+}
